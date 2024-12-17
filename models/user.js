@@ -1,6 +1,5 @@
-import { match } from 'assert';
-import e from 'express';
 import pkg from 'mongoose';
+
 const { Schema, model } = pkg;
 
 const userSchema = new Schema({
