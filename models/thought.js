@@ -1,5 +1,5 @@
-import { time, timeStamp } from 'console';
 import pkg from 'mongoose';
+import reactionSchema from './reaction.js';
 
 const { Schema, model } = pkg;
 
@@ -19,12 +19,7 @@ const thoughtSchema = new Schema({
         type: String,
         required: true
     },
-    reactions: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Reaction'
-        }
-    ]
+    reactions: [reactionSchema],
 },
 {
     toJSON: {
